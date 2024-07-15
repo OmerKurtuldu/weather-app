@@ -1,0 +1,17 @@
+global:
+  scrape_interval: 120s
+  evaluation_interval: 120s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:9090','localhost:8080','localhost:9100', 'localhost:9113']
+
+  - job_name: 'Spring Boot Application input'
+    metrics_path: '/actuator/prometheus'
+    scrape_interval: 2s
+    static_configs:
+      - targets: ['weather-app-1:8080','weather-app-2:8080','weather-app-3:8080']
+        labels:
+          application: 'Weather Service API'
