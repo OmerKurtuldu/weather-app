@@ -68,3 +68,4 @@ Swagger arayüzüne http://localhost:9595/swagger-ui.html üzerinden ulaşabilir
     ```
 
 Swagger arayüzüne http://localhost:8080/swagger-ui.html üzerinden ulaşabilirsiniz.
+
