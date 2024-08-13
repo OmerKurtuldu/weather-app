@@ -4,7 +4,7 @@ Bu proje, şehir adına göre mevcut hava durumu raporlarını sağlayan bir API
 
 **Çalışma Mantığı:**
 - **API İsteği:** `/v1/api/weather/{city}` URL'si üzerinden yapılır.
-- **Şehir Doğrulaması:** Şehir değeri boş veya ondalık olamaz; aksi takdirde 400 - Bad Request yanıtı döner.
+- **Şehir Doğrulaması:** Şehir değeri boş veya ondalık olamaz; aksi takdirde hata mesajı döner.
 - **Veri Kaynağı:**
   - **Veritabanı:** Veriler, PostgreSQL veritabanından alınır ve eğer 30 dakikadan daha eski değilse veritabanından getirilir.
   - **WeatherStackAPI:** Veritabanındaki veri 30 dakikadan eskiyse veya mevcut değilse, yeni veri WeatherStackAPI'den alınır ve önbelleğe kaydedilir.
@@ -68,3 +68,4 @@ Swagger arayüzüne http://localhost:9595/swagger-ui.html üzerinden ulaşabilir
     ```
 
 Swagger arayüzüne http://localhost:8080/swagger-ui.html üzerinden ulaşabilirsiniz.
+
